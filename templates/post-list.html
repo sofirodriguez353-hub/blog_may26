@@ -1,0 +1,11 @@
+<!--Recorrer la lista de posts-->
+<h1>Lista de Posts</h1>
+{% for post in blog_list %}
+    <ul>
+        <li>
+            <h2>{{ post.title }}</h2>
+            <p><strong>Autor:</strong> {{ post.author }}</p>
+            <p><strong>Fecha de creación:</strong> {{ post.created_at }}</p>
+        </li>
+    </ul>
+{% endfor %}
