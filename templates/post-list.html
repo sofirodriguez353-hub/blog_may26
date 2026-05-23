@@ -1,11 +1,14 @@
 <!--Recorrer la lista de posts-->
-<h1>Lista de Posts</h1>
+{% extends '_base.html' %}
+
+{% block content %}
 {% for post in blog_list %}
     <ul>
         <li>
-            <h2>{{ post.title }}</h2>
+            <a href="{% url 'post-detail' post.pk %}"><h2>{{ post.title }}</h2></a>
             <p><strong>Autor:</strong> {{ post.author }}</p>
             <p><strong>Fecha de creación:</strong> {{ post.created_at }}</p>
         </li>
     </ul>
 {% endfor %}
+{% endblock content %}
