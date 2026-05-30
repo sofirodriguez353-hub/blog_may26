@@ -8,4 +8,5 @@
         <p>{{ blog.content }}</p>
     </div>
     <a href="{% url 'post-update' blog.pk %}">Editar post</a>
+    <a href="{% url 'post-delete' blog.pk %}">Eliminar post</a>
 {% endblock content %}

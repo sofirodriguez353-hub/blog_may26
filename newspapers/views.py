@@ -5,6 +5,7 @@ from django.views.generic import (
                                     ListView,
                                     CreateView,
                                     UpdateView,
+                                    DeleteView,
                                     )
 
 # Create your views here.
@@ -25,3 +26,8 @@ class BlogUpdateView(UpdateView):
     model = Blog
     template_name = 'post-update.html'
     fields = ['title', 'content']
+
+class BlogDeleteView(DeleteView):
+    model = Blog
+    template_name = 'post-delete.html'
+    success_url = '/'
